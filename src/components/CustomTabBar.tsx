@@ -38,7 +38,7 @@ const CustomTabBar = () => {
 
   return (
     <div className="fixed bottom-0 w-full z-50">
-      <div className="tab-bar bg-white h-16 rounded-t-3xl shadow-lg flex items-center relative max-w-[768px] mx-auto">
+      <div className="tab-bar bg-white h-16 rounded-t-3xl flex items-center relative max-w-[768px] mx-auto tab-shadow">
         {renderIcon(IoHome, IoHomeOutline, 0, '/')}
         {renderIcon(IoHeart, IoHeartOutline, 1, '/')}
         <div className="flex-1 flex justify-center items-center">

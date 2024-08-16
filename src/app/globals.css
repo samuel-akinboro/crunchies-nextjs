@@ -39,3 +39,13 @@ body {
 .hide-scrollbar::-webkit-scrollbar {
   display: none;  /* Chrome, Safari and Opera */
 }
+
+.tab-shadow {
+  box-shadow: 0px -4px 16px #eee;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tab-shadow {
+    box-shadow: 0px -4px 16px #060606;
+  }
+}

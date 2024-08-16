@@ -3,7 +3,7 @@ import { IoSearchOutline } from 'react-icons/io5';
 
 const HomeHeader = () => {
   return (
-    <header className="bg-white dark:bg-black sticky top-0 z-50">
+    <header className="bg-white dark:bg-black sticky top-0 z-50 pt-2">
       <div className="flex justify-between items-center px-5 py-4 rounded-lg my-2.5 pb-1 mb-0">
         <div className="flex flex-col">
           <h1 className="text-2xl font-medium text-gray-800 dark:text-white">Hi Olumide Fala</h1>

@@ -15,7 +15,7 @@ const banners = [
 ];
 
 const BannerCarousel = () => {
-  const sliderRef = useRef(null);
+  const sliderRef = useRef<any>(null);
 
   const settings = {
     dots: true,

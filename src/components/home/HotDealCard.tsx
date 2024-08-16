@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { AiOutlineHeart } from 'react-icons/ai';
 
-const HotDealCard = ({ image, title, price, onFavoritePress }) => {
+const HotDealCard = ({ image, title, price, onFavoritePress }: any) => {
   return (
     <div className="relative h-48 rounded-2xl overflow-hidden min-w-56">
       <Image 

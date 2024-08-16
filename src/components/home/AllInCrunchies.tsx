@@ -22,7 +22,7 @@ const foodItems = [
   },
 ];
 
-const FoodItem = ({ item }) => (
+const FoodItem = ({ item }: any) => (
   <div className="mb-5 rounded-2xl overflow-hidden shadow-md">
     <div className="relative">
       <Image 

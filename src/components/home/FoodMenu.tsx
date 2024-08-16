@@ -4,7 +4,14 @@ import Image from 'next/image';
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 
-const FoodItem = ({ name, price, image, inBag = 0 }) => {
+interface Props {
+  name: string;
+  price: number;
+  image: string;
+  inBag?: number;
+}
+
+const FoodItem = ({ name, price, image, inBag = 0 }: Props) => {
   const [quantity, setQuantity] = useState(inBag);
   const [isWishlisted, setIsWishlisted] = useState(false);
 

@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { IoLocation, IoChevronForward } from 'react-icons/io5';
 
-const CurrentLocation = ({ location }) => {
+const CurrentLocation = ({ location }: any) => {
   return (
     <button className="relative rounded-2xl overflow-hidden border border-gray-200/30 w-full">
       <Image

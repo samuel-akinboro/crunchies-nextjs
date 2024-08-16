@@ -11,7 +11,7 @@ const categories = [
   // Add more categories as needed
 ];
 
-const CategoryItem = ({ item }) => (
+const CategoryItem = ({ item }: any) => (
   <div className="mr-5">
     <div className="w-30 h-30 rounded-full bg-white flex flex-col justify-center items-center border-[1.5px] border-[#F5F6F6] overflow-hidden relative">
       <div className="absolute w-30 h-30 rounded-full bottom-[-55%]" style={{ backgroundColor: item.color }} />

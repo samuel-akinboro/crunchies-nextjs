@@ -13,9 +13,9 @@ const CustomTabBar = () => {
 
   useEffect(() => {
     const updateTabWidth = () => {
-      const tabBar = document.querySelector('.tab-bar');
+      const tabBar:any = document.querySelector('.tab-bar');
       if (tabBar) {
-        setTabWidth(tabBar.offsetWidth / 5);
+        setTabWidth(tabBar?.offsetWidth / 5);
       }
     };
 
@@ -28,7 +28,7 @@ const CustomTabBar = () => {
     return `${activeTab * tabWidth + (tabWidth - INDICATOR_WIDTH) / 2}px`;
   };
 
-  const renderIcon = (ActiveIcon, InactiveIcon, index, href = '') => (
+  const renderIcon = (ActiveIcon:any, InactiveIcon:any, index:any, href = '') => (
     <div className="flex-1 flex justify-center items-center">
       <button onClick={() => setActiveTab(index)} className="focus:outline-none">
         {activeTab === index ? <ActiveIcon size={24} className="text-black" /> : <InactiveIcon size={24} className="text-gray-500" />}

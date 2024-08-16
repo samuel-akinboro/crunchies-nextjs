@@ -40,7 +40,7 @@ const CustomTabBar = () => {
             onClick={() => setActiveTab(2)} 
             className="w-16 h-16 rounded-full bg-white flex justify-center items-center -mt-8 focus:outline-none"
           >
-            <div className="w-12 h-12 rounded-full bg-primary flex justify-center items-center shadow-lg shadow-red-500">
+            <div className="w-12 h-12 rounded-full bg-primary flex justify-center items-center shadow-lg shadow-red-500 dark:shadow-md">
               <IoBagOutline size={20} className="text-white" />
             </div>
           </button>

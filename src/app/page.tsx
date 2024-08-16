@@ -11,10 +11,11 @@ import CurrentLocation from '@/components/home/CurrentLocation';
 
 export default function HomeScreen() {
   return (
-    <div>
-      <div className="flex flex-col min-h-screen max-w-md mx-auto bg-white dark:bg-black">
+    <div className='hide-scrollbar'>
+      <div className="flex flex-col min-h-screen max-w-md mx-auto bg-white dark:bg-black hide-scrollbar">
         <HomeHeader />
         <main className="flex-1 overflow-y-auto">
+          <div className='h-2' />
           <div className="px-5">
             <CurrentLocation location="3 Ajayi Street Lekki Phase 1 Lagos" />
             <div className="h-4" /> {/* Equivalent to SizedBox height={15} */}

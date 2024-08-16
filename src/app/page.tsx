@@ -14,7 +14,7 @@ export default function HomeScreen() {
     <div className='hide-scrollbar'>
       <div className="flex flex-col min-h-screen max-w-md mx-auto bg-white dark:bg-black hide-scrollbar">
         <HomeHeader />
-        <main className="flex-1 overflow-y-auto">
+        <main className="flex-1 overflow-y-auto hide-scrollbar">
           <div className='h-2' />
           <div className="px-5">
             <CurrentLocation location="3 Ajayi Street Lekki Phase 1 Lagos" />

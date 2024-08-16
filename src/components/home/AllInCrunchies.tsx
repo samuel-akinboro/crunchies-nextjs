@@ -23,7 +23,7 @@ const foodItems = [
 ];
 
 const FoodItem = ({ item }: any) => (
-  <div className="mb-5 rounded-2xl overflow-hidden shadow-md">
+  <div className="mb-5 rounded-2xl overflow-hidden shadow-md sm:mb-0 sm:w-[48%]">
     <div className="relative">
       <Image 
         src={item.image} 
@@ -60,7 +60,7 @@ const AllInCrunchies = () => {
   return (
     <div className="my-5 px-4">
       <h2 className="text-xl font-medium mb-4">All in Crunchies</h2>
-      <div>
+      <div className='sm:flex sm:flex-wrap sm:gap-4'>
         {foodItems?.map((item, index) => (
           <FoodItem item={item} key={index} />
         ))}

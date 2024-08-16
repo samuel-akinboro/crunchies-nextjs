@@ -4,7 +4,7 @@ import Image from 'next/image'
 const Recommendations = () => {
   return (
     <div className="flex items-center gap-1 mt-6 w-full">
-      <button className="flex-1 h-[6.5rem] relative overflow-visible transform active:scale-90">
+      <button className="flex-1 h-[6.5rem] sm:max-h-32 sm:max-w-32 relative overflow-visible transform active:scale-90">
         <Image
           src="/images/recom-1.png"
           layout="fill"
@@ -13,7 +13,7 @@ const Recommendations = () => {
           className="w-full h-full overflow-visible"
         />
       </button>
-      <button className="flex-1 h-[6.5rem] relative overflow-visible transform active:scale-90">
+      <button className="flex-1 h-[6.5rem] sm:max-h-32 sm:max-w-32  relative overflow-visible transform active:scale-90">
         <Image
           src="/images/recom-2.png"
           layout="fill"
@@ -22,7 +22,7 @@ const Recommendations = () => {
           className="w-full h-full overflow-visible"
         />
       </button>
-      <button className="flex-1 h-[6.5rem] relative overflow-visible transform active:scale-90">
+      <button className="flex-1 h-[6.5rem] sm:max-h-32 sm:max-w-32  relative overflow-visible transform active:scale-90">
         <Image
           src="/images/recom-3.png"
           layout="fill"

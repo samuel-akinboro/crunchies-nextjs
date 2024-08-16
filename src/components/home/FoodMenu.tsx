@@ -20,7 +20,7 @@ const FoodItem = ({ name, price, image, inBag = 0 }: Props) => {
   };
 
   return (
-    <div className="w-[48%] rounded-lg pb-2.5 mb-3.5 border border-gray-200 overflow-hidden">
+    <div className="w-[48%] sm:w-[31%] rounded-lg pb-2.5 mb-3.5 border border-gray-200 overflow-hidden">
       <div className="relative">
         <Image src={image} alt={name} width={200} height={120} className="w-full h-30 object-cover rounded-t-lg" />
         <motion.div 
@@ -76,6 +76,8 @@ const FoodMenu = () => {
     { name: 'Veggie Delight Cheesesteak', price: 3200, image: '/images/cheesesteak.png', inBag: 2 },
     { name: 'Chicken burger first delivery', price: 5000, image: '/images/burger-food.png' },
     { name: "Crunchies's Chicken wrap", price: 5000, image: '/images/chicken-wrap.png' },
+    { name: 'Fried Brown Rice', price: 5000, image: '/images/rice.png' },
+    { name: 'Veggie Delight Cheesesteak', price: 3200, image: '/images/cheesesteak.png', inBag: 2 },
   ];
 
   return (

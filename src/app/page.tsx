@@ -14,7 +14,7 @@ export default function HomeScreen() {
   return (
     <>
       <div className='hide-scrollbar'>
-        <div className="flex flex-col min-h-screen max-w-md mx-auto bg-white dark:bg-black hide-scrollbar">
+        <div className="flex flex-col min-h-screen max-w-[768px] mx-auto bg-white dark:bg-black hide-scrollbar">
           <HomeHeader />
           <main className="flex-1 overflow-y-auto hide-scrollbar">
             <div className='h-2' />

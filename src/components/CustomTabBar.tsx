@@ -1,29 +1,35 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { IoHomeOutline, IoHome, IoHeartOutline, IoHeart, IoBagOutline, IoListOutline, IoList, IoPersonOutline, IoPerson } from 'react-icons/io5';
 
-const TAB_WIDTH = 20; // percentage
 const INDICATOR_WIDTH = 60; // pixels
 
 const CustomTabBar = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const [tabWidth, setTabWidth] = useState(0);
+
+  useEffect(() => {
+    const updateTabWidth = () => {
+      const tabBar = document.querySelector('.tab-bar');
+      if (tabBar) {
+        setTabWidth(tabBar.offsetWidth / 5);
+      }
+    };
+
+    updateTabWidth();
+    window.addEventListener('resize', updateTabWidth);
+    return () => window.removeEventListener('resize', updateTabWidth);
+  }, []);
 
   const indicatorPosition = () => {
-    if (activeTab === 0) return `${activeTab * TAB_WIDTH + (TAB_WIDTH - INDICATOR_WIDTH / 5) / 3.7}%`;
-    if (activeTab === 1) return `${activeTab * TAB_WIDTH + (TAB_WIDTH - INDICATOR_WIDTH / 5) / 3.9}%`;
-    if (activeTab === 2) return `${2 * TAB_WIDTH + (TAB_WIDTH - INDICATOR_WIDTH / 5) / 4.5}%`;
-    if (activeTab === 3) return `${activeTab * TAB_WIDTH + (TAB_WIDTH - INDICATOR_WIDTH / 5) / 4}%`;
-    return `${activeTab * TAB_WIDTH + (TAB_WIDTH - INDICATOR_WIDTH / 5) / 4.5}%`;
+    return `${activeTab * tabWidth + (tabWidth - INDICATOR_WIDTH) / 2}px`;
   };
 
   const renderIcon = (ActiveIcon, InactiveIcon, index, href = '') => (
-    <div 
-      // href={href} 
-      className="flex-1 flex justify-center items-center"
-    >
+    <div className="flex-1 flex justify-center items-center">
       <button onClick={() => setActiveTab(index)} className="focus:outline-none">
         {activeTab === index ? <ActiveIcon size={24} className="text-black" /> : <InactiveIcon size={24} className="text-gray-500" />}
       </button>
@@ -31,8 +37,8 @@ const CustomTabBar = () => {
   );
 
   return (
-    <div className="fixed bottom-0 w-full bg-white z-50">
-      <div className="bg-white h-16 rounded-t-3xl shadow-lg flex items-center relative">
+    <div className="fixed bottom-0 w-full z-50">
+      <div className="tab-bar bg-white h-16 rounded-t-3xl shadow-lg flex items-center relative max-w-[768px] mx-auto">
         {renderIcon(IoHome, IoHomeOutline, 0, '/')}
         {renderIcon(IoHeart, IoHeartOutline, 1, '/')}
         <div className="flex-1 flex justify-center items-center">
